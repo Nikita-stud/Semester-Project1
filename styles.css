@@ -1,0 +1,80 @@
+@font-face{
+  font-family: "Futura-local";
+  src: url(/fonts-sp1/futura-renner/FuturaRenner-Regular.otf) format("woff2")
+}
+@font-face{
+  font-family: "Inter-local";
+  src: url(/fonts-sp1/inter/Inter-Bold.otf) format("woff2")
+}
+@font-face{
+  font-family: "Open Sans-local";
+  src: url(/fonts-sp1/open-sans/OpenSans-Bold.ttf) format("woff2")
+}
+
+*{
+  scroll-behavior: smooth;
+  font-family: 'Inter', serif, Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-repeat: no-repeat;
+}
+h1{
+  font-family: 'Futura PT', 'Futura-local', 'Inter', 'Open Sans', 'Helvetica Neue', sans-serif;                                       
+}
+h2{
+  font-family: 'Open Sans', 'Open Sans-local','Inter','Helvetica Neue', sans-serif;;
+}
+p{
+  font-family: 'Inter', 'Inter-local', 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+i{
+  font-size: var(--normal-text-header-mobile);
+  color: var(--white-for-eyes);
+}
+.span__empty{
+  display: none;
+}
+:root{
+  --red: #87282E;
+  --blue: #1B6087;
+  --green: #878636;
+  --white-for-eyes: rgb(244, 243, 243);
+  --black-for-eyes: #001C2A;
+  --margin-desktop: 0 50px;
+  --margin-mobile: 0 10px;
+  --h1-mobile: 2.4375rem;
+  --h1-desktop: 5.188rem;
+  --h2-mobile: 1.938rem;
+  --normal-text-header-mobile: 1.563rem;
+  --small-text-mobile: 1.188rem;
+}
+
+
+
+
+/* ----- Main Page----- */
+.upper-header{
+  width: 100%;
+  height: 85px;
+  background-color: var(--red);
+  position: relative;
+}
+nav{
+  font-size: var(--normal-text-header-mobile);
+  display: none;
+}
+nav a{
+  color: var(--white-for-eyes);
+}
+#hamburger-menu{
+  display: none;
+  position: absolute;
+}
+#hamburger-menu:checked ~ nav{
+  background-color: var(--red);
+  display: block;
+  margin-top: 50px;
+  padding: 15px;
+}
