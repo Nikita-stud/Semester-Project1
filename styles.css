@@ -25,6 +25,9 @@
   margin: 0;
   padding: 0;
 }
+main{
+  background-color: var(--white-for-eyes);
+}
 h1{
   font-family: 'Futura PT', 'Futura-local', 'Inter', 'Open Sans', 'Helvetica Neue', sans-serif;                                       
 }
@@ -202,7 +205,61 @@ header label{
 .get-tickets-time{
   font-size: var(--big-text-header-mobile);
 }
+/* ----- Main Page Events----- */
+.event-small-img{
+  margin-top: 40px;
+  width: 100%;
+  height: 364px;
+  background-size: cover;
+  position: relative;
+  border: 2px solid var(--black-for-eyes);
+  background-position-x: center;
+  background-position-y: center;
+}
+.img7{
+  background-image: url(/images-sp1/museum-outside-small.jpg);
+  background-position-y: 40%;
+}
+.img8{
+  background-image: url(/images-sp1/museum-inside-small.jpg);
+  background-position-y: 60%;
+}
+.img9{
+  background-image: url(/images-sp1/sun1.jpg);
+}
+.event-small-img__text{
+  font-family: 'Inter-local','Inter','Helvetica Neue', sans-serif;
+  font-size: var(--big-text-header-mobile);
+  color: var(--white-for-eyes);
+  position: absolute;
+  width: 90px;
+  top: 30px;
+  left: 20px;
+}
+.text1{
+  color: var(--black-for-eyes);
+}
+.text2{
+  top: 225px;
+}
 
+.event-info{
+  text-align: center;
+  font-size: var(--normal-text-header-mobile);
+  color: var(--white-for-eyes);
+  padding: 20px;
+  
+
+}
+.info1{
+  background-color: var(--red);
+}
+.info2{
+  background-color: var(--green);
+}
+.info3{
+  background-color: var(--blue);
+}
 
 
 
@@ -230,7 +287,7 @@ header label{
 
 
 /* ----- Buttons----- */
-.cta-tickets-mobile{
+.cta-mobile{
   display: block;
   margin: 20px 0 0 0;
   padding: 20px 0;
