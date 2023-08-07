@@ -8,22 +8,30 @@
 }
 @font-face{
   font-family: "Open Sans-local";
-  src: url(/fonts-sp1/open-sans/OpenSans-Light.ttf) format("woff2")
+  src: url(/fonts-sp1/open-sans/OpenSans-Bold.ttf) format("woff2")
+}
+@font-face{
+  font-family: "Open Sans-local-light";
+  src: url(/fonts-sp1/open-sans/OpenSans-Semibold.ttf) format("woff2")
 }
 
 *{
+  box-sizing: border-box;
+  background-repeat: no-repeat;
   scroll-behavior: smooth;
   font-family: 'Inter', serif, Arial, Helvetica, sans-serif;
   text-decoration: none;
   list-style: none;
   margin: 0;
   padding: 0;
-  background-repeat: no-repeat;
 }
 h1{
   font-family: 'Futura PT', 'Futura-local', 'Inter', 'Open Sans', 'Helvetica Neue', sans-serif;                                       
 }
 h2{
+  font-family: 'Open Sans-local-light','Inter','Helvetica Neue', sans-serif;
+}
+h3,h4{
   font-family: 'Open Sans', 'Open Sans-local','Inter','Helvetica Neue', sans-serif;
 }
 p{
@@ -33,12 +41,17 @@ i{
   font-size: var(--normal-text-header-mobile);
   color: var(--white-for-eyes);
 }
+hr{
+  border: 1.5px solid var(--black-for-eyes);
+  margin: 5px 20px 0 20px;
+}
 .span__empty{
   display: none;
 }
 .active{
   text-decoration: underline;
 }
+
 :root{
   --red: #87282E;
   --blue: #1B6087;
@@ -49,6 +62,7 @@ i{
   --margin-mobile: 0 10px;
   --h1-mobile: 2.4375rem;
   --h1-desktop: 5.188rem;
+  --big-text-header-mobile: 1.938rem;
   --normal-text-header-mobile: 1.563rem;
   --small-text-mobile: 1.188rem;
   --box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -57,7 +71,7 @@ i{
 
 
 
-/* ----- Main Page----- */
+/* ----- Main Page Header----- */
 .upper-header{
   z-index: 1;
   width: 100%;
@@ -106,25 +120,100 @@ header label{
   position: absolute;
   width: 190px;
   line-height: 40px;
-  top: 40%;
-  left: 20%;
-  transform: translate(-50%, -50%);
+  top: 10%;
+  left: 20px;
 }
 .title__container{
   width: 100%;
   text-align: center;
-  font-size: var(--normal-text-header-mobile);
+  font-size: var(--big-text-header-mobile);
   background-color: var(--red);
   color: var(--white-for-eyes);
   box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25) inset, 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
 }
-
-
+/* ----- Main Page Main----- */
+.exhibition-small-img{
+  width: 100%;
+  height: 150px;
+  background-position-x: bottom;
+  background-position-y: center;
+  background-size: cover;
+  border-radius: 2px;
+  border: 2px solid var(--black-for-eyes);
+  position: relative;
+}
+.img1{
+  background-image: url(/images-sp1/robots2-small.jpg);
+}
+.img2{
+  background-image: url(/images-sp1/technology-small.jpg);
+  background-position-y: 20%;
+}
+.img3{
+  background-image: url(/images-sp1/inside1-small.jpg);
+  background-position-y: 62%;
+}
+.img4{
+  background-image: url(/images-sp1/activity2-small.jpg);
+  background-position-y: 58%;
+}
+.img5{
+  background-image: url(/images-sp1/museum-inside3-small.jpg);
+}
+.img6{
+  background-image: url(/images-sp1/bio-small.jpg);
+  background-position-y: 40%;
+}
 .exhibition-img__text{
+  font-family: 'Open Sans-local','Inter','Helvetica Neue', sans-serif;
+  font-size: var(--normal-text-header-mobile);
+  border-radius: 2px;
+  padding: 5px 15px;
+  background: rgba(27, 96, 135, 0.60);
+  color: var(--white-for-eyes);
   position: absolute;
   top: 60%;
-  left: 20%;
-  transform: translate(-50%, -50%);
+  left: 15px;
+}
+/* ----- Main Page Tickets----- */
+.get-tickets__container{
+  max-height: 633px;
+  width: 100%;
+  background-color: var(--red);
+  color: var(--white-for-eyes);
+  box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25), 4px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+}
+.get-tickets__title{
+  font-family: 'Open Sans-local-light','Inter';
+  font-size: var(--big-text-header-mobile);
+  text-align: left;
+  padding: 20px 20px;
+}
+.get-tickets-hours__container{
+  padding: 10px;
+  margin: 0 20px;
+  border-radius: 2px;
+  font-size: var(--normal-text-header-mobile);
+  font-weight: 700;
+  text-align: center;
+  color: var(--black-for-eyes);
+  background-color: var(--white-for-eyes);
+}
+.get-tickets-time{
+  font-size: var(--big-text-header-mobile);
+}
+
+
+
+
+
+
+/* ----- Media Queries Tablet----- */
+@media (min-width: 744px){
+  .upper-header{
+    display: none;
+  }
+  
 }
 
 
@@ -133,9 +222,24 @@ header label{
 
 
 
-@media (min-width: 800px) {
-  .upper-header{
-    display: none;
-  }
-  
+
+
+
+
+
+
+
+/* ----- Buttons----- */
+.cta-tickets-mobile{
+  display: block;
+  margin: 20px 0 0 0;
+  padding: 20px 0;
+  width: 100%;
+  height: 86px;
+  border-radius: 2px;
+  text-align: center;
+  color: var(--white-for-eyes);
+  background-color: #1A1919;
+  font-family: 'Open Sans-local-light','Inter';
+  font-size: var(--big-text-header-mobile);
 }
