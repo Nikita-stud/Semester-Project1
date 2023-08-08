@@ -127,6 +127,10 @@ header label i{
   display: none;
   color: #001C2A;
 }
+.logo-small{
+  float: right;
+  margin: 15px 20px;
+}
 
 /* ----- Main Page First Image/Text----- */
 .welcome-img{
@@ -272,6 +276,7 @@ header label i{
   padding: 20px;
   border: 2px solid var(--black-for-eyes);
   box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  line-height: 50px;
 }
 .info1{
   background-color: var(--red);
@@ -317,10 +322,27 @@ footer hr{
 
 /* ----- Media Queries Tablet----- */
 @media (min-width: 744px){
+  /* ----- Header ----- */
   .upper-header{
     display: none;
   }
-  
+  /* ----- Footer ----- */
+  footer nav, footer nav a, h6{
+    line-height: 36px;
+  }
+  h6{
+    margin-bottom: 15px;
+  }
+  footer hr{
+    display: none;
+  }
+
+
+
+
+
+
+
 }
 
 
