@@ -1,6 +1,6 @@
 @font-face{
   font-family: "Futura-local";
-  src: url(/fonts-sp1/futura-renner/FuturaRenner-Regular.otf) format("woff2")
+  src: url(/fonts-sp1/futura-renner/SIL\ Open\ Font\ License.txt) format("woff2")
 }
 @font-face{
   font-family: "Inter-local";
@@ -29,7 +29,8 @@ main{
   background-color: var(--white-for-eyes);
 }
 h1{
-  font-family: 'Futura PT', 'Futura-local', 'Inter', 'Open Sans', 'Helvetica Neue', sans-serif;                                       
+  font-family: 'Futura PT','Futura-local', 'Inter', 'Open Sans', 'Helvetica Neue', sans-serif;     
+  font-weight: 100;                                  
 }
 h2{
   font-family: 'Open Sans-local-light','Inter','Helvetica Neue', sans-serif;
@@ -59,12 +60,18 @@ i{
   --green: #878636;
   --white-for-eyes: rgb(244, 243, 243);
   --black-for-eyes: #001C2A;
-  --margin-desktop: 0 50px;
-  --margin-mobile: 0 10px;
-  --h1-mobile: 2.4375rem;
+  --margin-desktop: 0 100px;
+  --margin-tablet: 0 40px;
+  --margin-mobile: 0 20px;
   --h1-desktop: 5.188rem;
-  --big-text-header-mobile: 1.938rem;
-  --normal-text-header-mobile: 1.563rem;
+  --h1-tablet: 3.875rem;
+  --h1-mobile: 2.4375rem;
+  --big-text-desktop: 3.125rem;
+  --big-text-tablet: 2.313rem;
+  --big-text-mobile: 1.75rem;
+  --normal-text-desktop: 2.313rem;
+  --normal-text-tablet: 1.75rem;
+  --normal-text-mobile: 1.375rem;
   --small-text-mobile: 1.188rem;
   --box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
@@ -73,7 +80,7 @@ i{
 
 
 /* ----- Main Page Header----- */
-.upper-header{
+.upper-header-mobile{
   z-index: 1;
   width: 100%;
   height: 85px;
@@ -81,10 +88,13 @@ i{
   position: relative;
   box-shadow: var(--box-shadow);
 }
+.upper-header-desktop{
+  display: none;
+}
 header nav{
   position: absolute;
   background-color: var(--red);
-  font-size: var(--normal-text-header-mobile);
+  font-size: var(--normal-text-mobile);
   display: none;
   border-radius: 0 2px 0 0;
   border-bottom: 1.5px solid var(--white-for-eyes, #F4F3F3);
@@ -152,7 +162,7 @@ header label i{
 .title__container{
   width: 100%;
   text-align: center;
-  font-size: var(--normal-text-header-mobile);
+  font-size: var(--normal-text-mobile);
   background-color: var(--red);
   color: var(--white-for-eyes);
   box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25) inset, 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
@@ -192,7 +202,7 @@ header label i{
 }
 .exhibition-img__text{
   font-family: 'Open Sans-local','Inter','Helvetica Neue', sans-serif;
-  font-size: var(--normal-text-header-mobile);
+  font-size: var(--normal-text-mobile);
   border-radius: 2px;
   padding: 5px 15px;
   background: rgba(27, 96, 135, 0.60);
@@ -211,7 +221,7 @@ header label i{
 }
 .get-tickets__title{
   font-family: 'Open Sans-local-light','Inter';
-  font-size: var(--big-text-header-mobile);
+  font-size: var(--big-text-mobile);
   text-align: left;
   padding: 20px 20px;
 }
@@ -219,7 +229,7 @@ header label i{
   padding: 10px;
   margin: 0 20px;
   border-radius: 2px;
-  font-size: var(--normal-text-header-mobile);
+  font-size: var(--normal-text-mobile);
   font-weight: 700;
   text-align: center;
   color: var(--black-for-eyes);
@@ -230,7 +240,7 @@ header label i{
   margin: 5px 20px 0 20px;
 }
 .get-tickets-time{
-  font-size: var(--big-text-header-mobile);
+  font-size: var(--big-text-mobile);
 }
 /* ----- Main Page Events----- */
 .event-small-img{
@@ -256,7 +266,7 @@ header label i{
 }
 .event-small-img__text{
   font-family: 'Inter-local','Inter','Helvetica Neue', sans-serif;
-  font-size: var(--big-text-header-mobile);
+  font-size: var(--big-text-mobile);
   color: var(--white-for-eyes);
   position: absolute;
   width: 90px;
@@ -271,7 +281,7 @@ header label i{
 }
 .event-info{
   text-align: center;
-  font-size: var(--normal-text-header-mobile);
+  font-size: var(--normal-text-mobile);
   color: var(--white-for-eyes);
   padding: 20px;
   border: 2px solid var(--black-for-eyes);
@@ -297,12 +307,12 @@ footer{
 footer nav, footer nav a, h6{
   color: var(--white-for-eyes);
   font-family: 'Open Sans-local-light','Inter','Helvetica Neue', sans-serif;
-  font-size: var(--normal-text-header-mobile);
+  font-size: var(--normal-text-mobile);
   line-height: 45px;
 }
 h6{
   margin-top: 20px;
-  font-size: var(--big-text-header-mobile);
+  font-size: var(--big-text-mobile);
 }
 footer hr{
   margin: 0px 0px 10px 0px;
@@ -311,9 +321,18 @@ footer hr{
 .footer-logo{
   display: block;
   margin: 40px 0 20px 0;
-  font-size: var(--big-text-header-mobile);
+  font-size: var(--big-text-mobile);
   color: var(--white-for-eyes);
 }
+
+
+
+
+
+
+
+
+
 
 
 
@@ -323,27 +342,141 @@ footer hr{
 /* ----- Media Queries Tablet----- */
 @media (min-width: 744px){
   /* ----- Header ----- */
-  .upper-header{
-    display: none;
-  }
-  /* ----- Footer ----- */
-  footer nav, footer nav a, h6{
-    line-height: 36px;
-  }
-  h6{
-    margin-bottom: 15px;
-  }
-  footer hr{
-    display: none;
-  }
+.upper-header-mobile{
+  display: none;
+  flex-direction: row;
+}
+.upper-header-desktop{
+  display: contents;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin: 0 40px;
+}
+.upper-header-desktop-cta{
+  display: flex;
+  gap: 20px;
+  float: right;
+}
+/* ----- Main Page First Image/Text----- */
+
+.welcome-img{
+  background-image: url(/images-sp1/rocket-big.jpg);
+  height: 798px;
+  position: relative;
+}
+.welcome-img__text{
+  font-size: var(--h1-tablet);
+  color: var(--white-for-eyes);
+  background-color:rgba(135, 40, 46, 0.60) ;
+  border-radius: 2px;
+  position: absolute;
+  width: 650px;
+  padding: 20px 50px;
+  line-height: 90px;
+  top: 60%;
+  left: 20px;
+}
+/* ----- Footer ----- */
+footer{
+  padding: 50px 80px;
+}
+.footer-navigation{
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+footer nav, footer nav a, h6{
+  line-height: 36px;
+}
+h6{
+  margin-bottom: 15px;
+  text-decoration: underline;
+  text-underline-offset: 8px;
+}
+footer hr{
+  display: none;
+}
+.one-third{
+  display: inline-block;
+  height: fit-content;
+}
 
 
 
 
-
-
+.cta-desktop{
+  font-size: var(--normal-text-tablet);
+  height: 55px;
+  width: 205px;
+}
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 1280px){
+i{
+  font-size: 2.4rem;
+}
+  /* ----- Header ----- */
+  .upper-header-desktop{
+    display: contents;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin: 0 100px;
+  }
+  .welcome-img__text{
+    font-size: var(--h1-desktop);
+    color: var(--white-for-eyes);
+    background-color:rgba(135, 40, 46, 0.60) ;
+    border-radius: 2px;
+    position: absolute;
+    width: 780px;
+    padding: 20px 50px;
+    line-height: 90px;
+    top: 60%;
+    left: 50px;
+  }
+/* ----- Footer ----- */
+footer nav, footer nav a, h6{
+  font-family: 'Inter', 'Inter-local', 'Open Sans', 'Helvetica Neue', sans-serif;
+  line-height: 46px;
+  font-size: var(--normal-text-desktop);
+}
+h6{
+  font-size: var(--big-text-desktop);
+
+  margin-bottom: 20px;
+}
+.footer-logo{
+  font-size: var(--big-text-desktop);
+}
+
+
+
+
+.cta-desktop{
+  font-size: var(--normal-text-desktop);
+  height: 65px;
+  width: 235px;
+}
+
+}
+
 
 
 
@@ -370,5 +503,13 @@ footer hr{
   color: var(--white-for-eyes);
   background-color: #1A1919;
   font-family: 'Open Sans-local-light','Inter';
-  font-size: var(--big-text-header-mobile);
+  font-size: var(--big-text-mobile);
+}
+.cta-desktop{
+  padding: 10px 20px;
+  text-align: center;
+  color: var(--white-for-eyes);
+  background-color: var(--red);
+  border-radius: 2px;
+  box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
