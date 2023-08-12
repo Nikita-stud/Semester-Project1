@@ -25,7 +25,7 @@
   margin: 0;
   padding: 0;
 }
-main{
+main, header{
   background-color: var(--white-for-eyes);
 }
 h1{
@@ -33,7 +33,7 @@ h1{
   font-weight: 100;                                  
 }
 h2{
-  font-family: 'Open Sans-local-light','Inter','Helvetica Neue', sans-serif;
+  font-family: 'Open Sans-local', 'Open Sans-local-light','Inter','Helvetica Neue', sans-serif;
 }
 h3,h4{
   font-family: 'Open Sans', 'Open Sans-local','Inter','Helvetica Neue', sans-serif;
@@ -314,7 +314,7 @@ header label i{
 /* ----- Footer ----- */
 footer{
   background-color: var(--red);
-  margin-top: 40px;
+  margin-top: 0px;
   padding: 5px 20px 20px 20px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
 }
@@ -337,6 +337,54 @@ footer hr{
   margin: 40px 0 20px 0;
   font-size: var(--big-text-mobile);
   color: var(--white-for-eyes);
+}
+/* ----- Information Page----- */
+.info__content{
+  padding: 0 20px 30px 20px;
+  font-size: var(--small-text-mobile);
+}
+.info__content p{
+  margin: 10px 0px 15px 0;
+}
+.info__content a{
+  display: block;
+  margin: 15px 0 10px 0;
+  text-decoration: underline;
+  color: var(--black-for-eyes);
+  font-size: var(--small-text-mobile);
+}
+.info__content-underline{
+  max-width: 400px;
+}
+.info__content-lines{
+  border: 1px solid;
+  margin-top: -12px;
+}
+.info__content-bold{
+  font-family: 'Inter-local', 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: bold;
+  font-size: 1.3rem;
+  float: right;
+}
+.street{
+  margin-top: 10px;
+  float: none;
+  display: block;
+}
+.h1-informative{
+  font-size: var(--h1-mobile);
+  line-height: 40px;
+  padding-top: 30px;
+  margin-bottom: 20px;
+}
+.info-page__img{
+  background-image: url(/images-sp1/info-page.jpg);
+  background-position: center;
+  margin: 30px 20px;
+  max-width: 900px;
+  height: 311px;
+  background-size: cover;
+  padding: 0 20px;
 }
 
 
@@ -393,7 +441,7 @@ footer hr{
 }
 /* ----- Footer ----- */
 footer{
-  padding: 50px 80px;
+  padding: 50px 40px;
 }
 .footer-navigation{
   display: flex;
@@ -402,8 +450,10 @@ footer{
 }
 footer nav, footer nav a, h6{
   line-height: 36px;
+  font-size: var(--normal-text-tablet);
 }
 h6{
+  font-size: var(--big-text-tablet);
   margin-bottom: 15px;
   text-decoration: underline;
   text-underline-offset: 8px;
@@ -411,10 +461,43 @@ h6{
 footer hr{
   display: none;
 }
+.footer-logo{
+  margin: 50px 0 20px 0;
+  font-size: var(--big-text-tablet);
+}
 .one-third{
   display: inline-block;
   height: fit-content;
 }
+/* ----- Information Page----- */
+.info__content{
+  padding: 0 40px 50px 40px;
+  font-size: var(--normal-text-tablet);
+}
+.info__content p{
+  margin: 15px 0px 20px 0;
+}
+.info__content a{
+  font-size: var(--normal-text-tablet);
+}
+.info__content-underline{
+  max-width: 700px;
+}
+.info__content-bold{
+  font-size: var(--normal-text-tablet);
+}
+.h1-informative{
+  font-size: var(--h1-tablet);
+  line-height: 60px;
+  padding-top: 70px;
+  margin-bottom: 30px;
+}
+.info-page__img{
+  margin: 10px 40px 40px 40px;
+  max-width: 100%;
+  height: 511px;
+}
+
 
 
 
@@ -470,6 +553,9 @@ i{
   left: 50px;
 }
 /* ----- Footer ----- */
+footer{
+  padding: 50px 100px;
+}
 footer nav, footer nav a, h6{
   font-family: 'Inter', 'Inter-local', 'Open Sans', 'Helvetica Neue', sans-serif;
   line-height: 46px;
@@ -477,12 +563,42 @@ footer nav, footer nav a, h6{
 }
 h6{
   font-size: var(--big-text-desktop);
-
   margin-bottom: 20px;
 }
 .footer-logo{
   font-size: var(--big-text-desktop);
 }
+/* ----- Information Page----- */
+.info__content{
+  padding: 0 100px 50px 100px;
+  font-size: var(--normal-text-desktop);
+}
+.info__content p{
+  margin: 30px 0px 20px 0;
+}
+.info__content a{
+  font-size: var(--normal-text-desktop);
+}
+.info__content-underline{
+  max-width: 1000px;
+}
+.info__content-bold{
+  font-size: var(--normal-text-desktop);
+}
+.h1-informative{
+  font-size: var(--h1-desktop);
+  line-height: 80px;
+  padding-top: 80px;
+  margin-bottom: 45px;
+}
+.info-page__img{
+  display: inline-block;
+  margin: 10px 100px 40px 100px;
+  height: 724px;
+  width: 651px;
+}
+
+
 
 
 
