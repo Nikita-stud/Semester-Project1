@@ -387,13 +387,26 @@ footer hr{
   padding: 0 20px;
 }
 /* ----- Events and News Page----- */
-.event__content{
+.event__box{
   font-size: var(--normal-text-mobile);
   padding: 20px 20px 20px 20px;
   margin-bottom: 40px;
   width: 100%;
-  max-height: 690px;
   color: var(--white-for-eyes);
+  box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25) inset, 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
+
+}
+.event-box__content{
+  padding: 20px 2px 0px 2px;
+  font-size: var(--small-text-mobile);
+}
+.event-box__title{
+  margin-bottom: 15px;
+  font-size: var(--big-text-mobile);
+}
+.event-box__date{
+  margin-top: 15px;
+  font-size: var(--big-text-mobile);
 }
 .event1{
   background-color: var(--blue);
@@ -404,10 +417,16 @@ footer hr{
 .event3{
   background-color: var(--green);
 }
-.event-img1{
+.event-page-img{
+  margin-top: 0px;
+  width: 100%;
+  height: 314px;
+  background-size: cover;
+  position: relative;
+  border: 2px solid var(--black-for-eyes);
+  background-position-x: center;
+  background-position-y: center;
 }
-
-
 
 
 
@@ -658,6 +677,7 @@ h6{
   text-align: center;
   color: var(--white-for-eyes);
   background-color: #1A1919;
+  box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
   font-family: 'Open Sans-local-light','Inter';
   font-size: var(--big-text-mobile);
 }
