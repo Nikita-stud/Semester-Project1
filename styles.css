@@ -133,10 +133,6 @@ header label i{
   margin-top: -85px;
   padding: 20px 20px 15px 20px;
 }
-#hamburger-menu:checked ~ {
-  display: none;
-  color: #001C2A;
-}
 .logo-small{
   float: right;
   margin: 15px 20px;
@@ -394,7 +390,6 @@ footer hr{
   width: 100%;
   color: var(--white-for-eyes);
   box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25) inset, 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
-
 }
 .event-box__content{
   padding: 20px 2px 0px 2px;
@@ -428,6 +423,77 @@ footer hr{
   background-position-y: center;
 }
 
+/* ----- Specification Page Box containing info itself----- */
+.read-more__container{
+  width: 100%;
+  padding: 20px;
+  color: var(--white-for-eyes);
+  font-size: var(--small-text-mobile);
+  border: 2px solid black;
+}
+.read-more__container::after{
+  clear: both;
+  content: "";
+  display: table;
+}
+.read-more__title{
+  margin-bottom: 10px;
+}
+.read-more-open{
+  display: none;
+}
+#specifics-checkbox{
+  display: none;
+}
+#specifics-checkbox:checked ~ .read-more-open{
+  display: contents;
+}
+#specifics-checkbox:checked ~ label{
+  display: none;
+}
+.opened__content, .closed__content{
+  display: inline;
+}
+.opened__content{
+  background: linear-gradient(90deg, var(--white-for-eyes),rgba(0, 0, 0, 0));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+#specifics-checkbox:checked ~ .opened__content{
+  color: var(--white-for-eyes);
+}
+.closed__content{
+  display: inline;
+}
+/* ----- Specification Page Box color and img above----- */
+.card1, .card4{
+  background-color: var(--red);
+}
+.spc-img1{
+  background-image: url(/images-sp1/lab.jpg);
+}
+.card2, .card5{
+  background-color: var(--blue);
+}
+.spc-img2{
+  background-image: url(/images-sp1/bio2.jpg);
+  background-position: center 40%;
+}
+.card3, .card6{
+  background-color: var(--green);
+}
+.spc-img3{
+  background-image: url(/images-sp1/la.jpg);
+}
+.spc-img4{
+  background-image: url(/images-sp1/lab.jpg);
+}
+.spc-img5{
+  background-image: url(/images-sp1/lab.jpg);
+}
+.spc-img6{
+  background-image: url(/images-sp1/lab.jpg);
+}
 
 
 
@@ -669,6 +735,7 @@ h6{
 /* ----- Buttons----- */
 .cta-mobile{
   display: block;
+  cursor: pointer;
   margin: 20px 0 0 0;
   padding: 20px 0;
   width: 100%;
@@ -682,10 +749,24 @@ h6{
   font-size: var(--big-text-mobile);
 }
 .cta-desktop{
+  cursor: pointer;
   padding: 10px 20px;
   text-align: center;
   color: var(--white-for-eyes);
   background-color: var(--red);
   border-radius: 2px;
   box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.cta-read{
+  float: right;
+  display: inline;
+  margin-top: 15px;
+  cursor: pointer;
+  width: 150px;
+  height: 37px;
+  border-radius: 2px;
+  display: grid;
+  place-items: center;
+  background-color: var(--black-for-eyes);
+  color: var(--white-for-eyes);
 }
