@@ -165,9 +165,9 @@ header label i{
   top: 10%;
   left: 20px;
 }
-.specifics__text{
+.specifics__header{
   color: var(--white-for-eyes);
-  width: 230px;
+  width: 220px;
 }
 .title__container{
   width: 100%;
@@ -306,6 +306,7 @@ header label i{
 }
 .info3{
   background-color: var(--blue);
+  margin-bottom: 40px;
 }
 /* ----- Footer ----- */
 footer{
@@ -442,13 +443,13 @@ footer hr{
 .read-more-open{
   display: none;
 }
-#specifics-checkbox{
+#specifics-checkbox1, #specifics-checkbox2, #specifics-checkbox3, #specifics-checkbox4, #specifics-checkbox5, #specifics-checkbox6{
   display: none;
 }
-#specifics-checkbox:checked ~ .read-more-open{
+#specifics-checkbox1:checked ~ .read-more-open{
   display: contents;
 }
-#specifics-checkbox:checked ~ label{
+#specifics-checkbox1:checked ~ label{
   display: none;
 }
 .opened__content, .closed__content{
@@ -459,11 +460,57 @@ footer hr{
   -webkit-background-clip: text;
   color: transparent;
 }
-#specifics-checkbox:checked ~ .opened__content{
+#specifics-checkbox1:checked ~ .opened__content{
   color: var(--white-for-eyes);
 }
 .closed__content{
   display: inline;
+}
+/* ----- Specification Page Box Nightmare because of no Javascript ----- */
+#specifics-checkbox2:checked ~ .read-more-open{
+  display: contents;
+}
+#specifics-checkbox2:checked ~ label{
+  display: none;
+}
+#specifics-checkbox2:checked ~ .opened__content{
+  color: var(--white-for-eyes);
+}
+#specifics-checkbox3:checked ~ .read-more-open{
+  display: contents;
+}
+#specifics-checkbox3:checked ~ label{
+  display: none;
+}
+#specifics-checkbox3:checked ~ .opened__content{
+  color: var(--white-for-eyes);
+}
+#specifics-checkbox4:checked ~ .read-more-open{
+  display: contents;
+}
+#specifics-checkbox4:checked ~ label{
+  display: none;
+}
+#specifics-checkbox4:checked ~ .opened__content{
+  color: var(--white-for-eyes);
+}
+#specifics-checkbox5:checked ~ .read-more-open{
+  display: contents;
+}
+#specifics-checkbox5:checked ~ label{
+  display: none;
+}
+#specifics-checkbox5:checked ~ .opened__content{
+  color: var(--white-for-eyes);
+}
+#specifics-checkbox6:checked ~ .read-more-open{
+  display: contents;
+}
+#specifics-checkbox6:checked ~ label{
+  display: none;
+}
+#specifics-checkbox6:checked ~ .opened__content{
+  color: var(--white-for-eyes);
 }
 /* ----- Specification Page Box color and img above----- */
 .card1, .card4{
@@ -477,22 +524,29 @@ footer hr{
 }
 .spc-img2{
   background-image: url(/images-sp1/bio2.jpg);
-  background-position: center 40%;
+  background-position-y: 40%;
 }
 .card3, .card6{
   background-color: var(--green);
 }
+.card6{
+  margin-bottom: 40px;
+  box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
 .spc-img3{
-  background-image: url(/images-sp1/la.jpg);
+  background-image: url(/images-sp1/vr-small.jpg);
 }
 .spc-img4{
-  background-image: url(/images-sp1/lab.jpg);
+  background-image: url(/images-sp1/activity-small.jpg);
+  background-position-y: 90%;
 }
 .spc-img5{
-  background-image: url(/images-sp1/lab.jpg);
+  background-image: url(/images-sp1/museum-inside-small.jpg);
+  background-position-y: 55%;
 }
 .spc-img6{
-  background-image: url(/images-sp1/lab.jpg);
+  background-image: url(/images-sp1/robots-small.jpg);
+  background-position: 40% 25%;
 }
 
 
