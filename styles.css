@@ -549,6 +549,61 @@ footer hr{
   background-position: 40% 25%;
 }
 
+/* ----- Tickets-Calendar Page----- */
+.calendar__container{
+  font-family: 'Open Sans-local','Inter','Helvetica Neue', sans-serif;
+  font-size: var(--normal-text-mobile);
+  place-items: center;
+  padding: 0 40px;
+}
+table, th, td{
+  width: 100%;
+  height: 65px;
+  table-layout: fixed;
+  text-align: center;
+  border-collapse: collapse;
+  border: 4px solid #ABABAB;
+}
+th{
+  height: 50px;
+}
+td{
+  cursor: pointer;
+  background-color: white;
+}
+td:hover{
+  background-color: #ABABAB;
+  border: 4.5px solid #000;
+}
+td:active{
+  background: #191919;
+  color: white;
+}
+.week-days{
+  background-color: var(--red);
+  color: var(--white-for-eyes);
+}
+.closed-date{
+  background-color: #D6CDCD;
+}
+.inactive-date{
+  background-color: #EDEDED;
+}
+.event-date{
+  background-color: var(--blue);
+  color:var(--white-for-eyes);
+}
+.event-date:hover ~ {
+  display: contents;
+}
+
+
+
+
+
+
+
+
 
 
 
@@ -810,6 +865,24 @@ h6{
   background-color: var(--red);
   border-radius: 2px;
   box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.cta-buy{
+  width: 387px;
+  height: 86px;
+  margin: 40px;
+  cursor: pointer;
+  float: right;
+  clear: both;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2px;
+  text-align: center;
+  color: var(--white-for-eyes);
+  background-color: #1A1919;
+  box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  font-family: 'Open Sans-local-light','Inter';
+  font-size: var(--big-text-mobile);
 }
 .cta-read{
   float: right;
