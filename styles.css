@@ -63,16 +63,15 @@ i{
   --margin-desktop: 0 100px;
   --margin-tablet: 0 40px;
   --margin-mobile: 0 20px;
-  --h1-desktop: 5.188rem;
-  --h1-tablet: 3.875rem;
+  --h1-desktop: 3.75rem;
+  --h1-tablet: 3rem;
   --h1-mobile: 2.4375rem;
-  --big-text-desktop: 3.125rem;
-  --big-text-tablet: 2.313rem;
+  --big-text-desktop: 3rem;
+  --big-text-tablet: 2.43rem;
   --big-text-mobile: 1.75rem;
-  --normal-text-desktop: 2.313rem;
-  --normal-text-tablet: 1.75rem;
-  --normal-text-mobile: 1.375rem;
-  --small-text-mobile: 1.188rem;
+  --normal-text-desktop: 1.75rem;
+  --normal-text-tablet: 1.375rem;
+  --normal-text-mobile: 1.188rem;
   --box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
@@ -150,7 +149,7 @@ header label i{
 }
 .news-page{
   background-image: url(/images-sp1/museum-inside2-small.jpg);
-  background-position-y: 60%;
+  background-position: 30% 60%;
 }
 .specifics-page{
   background-image: url(/images-sp1/museum-aqua-small.jpg);
@@ -176,6 +175,9 @@ header label i{
   background-color: var(--red);
   color: var(--white-for-eyes);
   box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25) inset, 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.title__container-desktop{
+  display: none;
 }
 /* ----- Main Page Main----- */
 .exhibition-small-img{
@@ -338,7 +340,7 @@ footer hr{
 /* ----- Information Page----- */
 .info__content{
   padding: 0 20px 30px 20px;
-  font-size: var(--small-text-mobile);
+  font-size: var(--normal-text-mobile);
 }
 .info__content p{
   margin: 10px 0px 15px 0;
@@ -348,7 +350,7 @@ footer hr{
   margin: 15px 0 10px 0;
   text-decoration: underline;
   color: var(--black-for-eyes);
-  font-size: var(--small-text-mobile);
+  font-size: var(--normal-text-mobile);
 }
 .info__content-underline{
   max-width: 400px;
@@ -394,7 +396,7 @@ footer hr{
 }
 .event-box__content{
   padding: 20px 2px 0px 2px;
-  font-size: var(--small-text-mobile);
+  font-size: var(--normal-text-mobile);
 }
 .event-box__title{
   margin-bottom: 15px;
@@ -429,7 +431,7 @@ footer hr{
   width: 100%;
   padding: 20px;
   color: var(--white-for-eyes);
-  font-size: var(--small-text-mobile);
+  font-size: var(--normal-text-mobile);
   border: 2px solid black;
 }
 .read-more__container::after{
@@ -634,10 +636,12 @@ td:active{
   float: right;
 }
 /* ----- Main Page First Image/Text----- */
-.welcome-img{
+.home-page-img{
   background-image: url(/images-sp1/rocket-big.jpg);
-  height: 798px;
+  box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  height: 75vh;
   position: relative;
+  background-position: 50% 27%;
 }
 .welcome-img__text{
   font-size: var(--h1-tablet);
@@ -645,12 +649,35 @@ td:active{
   background-color:rgba(135, 40, 46, 0.60) ;
   border-radius: 2px;
   position: absolute;
-  width: 650px;
-  padding: 20px 50px;
-  line-height: 90px;
-  top: 60%;
-  left: 20px;
+  width: 550px;
+  padding: 20px 30px;
+  line-height: 60px;
+  top: 65%;
+  left: 10px;
 }
+.title__container{
+  display: none;
+}
+.title__container-desktop{
+  display: block;
+  background-color: var(--blue);
+  font-size: var(--normal-text-tablet);
+  color: var(--white-for-eyes);
+  border-radius: 2px;
+  width: 413px;
+  padding: 10px 0;
+  text-align: center;
+  margin: 30px 0 30px 10px;
+}
+
+/* ----- Events and News Page----- */
+.news-page{
+  background-image: url(/images-sp1/museum-inside2-big.jpg);
+  background-position: center;
+  height: 75vh;
+}
+
+
 /* ----- Footer ----- */
 footer{
   padding: 50px 40px;
@@ -683,11 +710,8 @@ footer hr{
 }
 /* ----- Information Page----- */
 .info__content{
-  padding: 0 40px 50px 40px;
+  padding: 0 40px 30px 40px;
   font-size: var(--normal-text-tablet);
-}
-.info__content p{
-  margin: 15px 0px 20px 0;
 }
 .info__content a{
   font-size: var(--normal-text-tablet);
@@ -700,9 +724,9 @@ footer hr{
 }
 .h1-informative{
   font-size: var(--h1-tablet);
-  line-height: 60px;
-  padding-top: 70px;
-  margin-bottom: 30px;
+  line-height: 50px;
+  padding-top: 60px;
+  margin-bottom: 20px;
 }
 .info-page__img{
   margin: 10px 40px 40px 40px;
@@ -715,7 +739,7 @@ footer hr{
 
 /* ----- Buttons ----- */
 .cta-desktop{
-  font-size: var(--normal-text-tablet);
+  font-size: var(--big-text-mobile);
   height: 55px;
   width: 205px;
 }
@@ -754,15 +778,11 @@ i{
 /* ----- Main Page First Image----- */
 .welcome-img__text{
   font-size: var(--h1-desktop);
-  color: var(--white-for-eyes);
-  background-color:rgba(135, 40, 46, 0.60) ;
-  border-radius: 2px;
-  position: absolute;
-  width: 780px;
-  padding: 20px 50px;
-  line-height: 90px;
+  font-family: 'Open Sans-local-light','Inter','Helvetica Neue', sans-serif;
+  width: 870px;
+  padding: 20px 90px;
+  line-height: 75px;
   top: 60%;
-  left: 50px;
 }
 /* ----- Footer ----- */
 footer{
@@ -782,11 +802,8 @@ h6{
 }
 /* ----- Information Page----- */
 .info__content{
-  padding: 0 100px 50px 100px;
+  padding: 0 100px 40px 100px;
   font-size: var(--normal-text-desktop);
-}
-.info__content p{
-  margin: 30px 0px 20px 0;
 }
 .info__content a{
   font-size: var(--normal-text-desktop);
@@ -799,8 +816,6 @@ h6{
 }
 .h1-informative{
   font-size: var(--h1-desktop);
-  line-height: 80px;
-  padding-top: 80px;
   margin-bottom: 45px;
 }
 .info-page__img{
@@ -816,7 +831,7 @@ h6{
 
 /* ----- Buttons ----- */
 .cta-desktop{
-  font-size: var(--normal-text-desktop);
+  font-size: var(--big-text-tablet);
   height: 65px;
   width: 235px;
 }
