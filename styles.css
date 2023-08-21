@@ -401,6 +401,9 @@ footer hr{
   padding: 20px 2px 0px 2px;
   font-size: var(--normal-text-mobile);
 }
+.event-box-bottom__content p{
+  display: none;
+}
 .event-box__title{
   margin-bottom: 15px;
   font-size: var(--big-text-mobile);
@@ -604,7 +607,21 @@ td:active{
 
 
 
-
+.cta-mobile{
+  display: block;
+  cursor: pointer;
+  margin: 20px 0 0 0;
+  padding: 20px 0;
+  width: 100%;
+  height: 86px;
+  border-radius: 2px;
+  text-align: center;
+  color: var(--white-for-eyes);
+  background-color: #1A1919;
+  box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  font-family: 'Open Sans-local-light','Inter';
+  font-size: var(--big-text-mobile);
+}
 
 
 
@@ -739,6 +756,61 @@ td:active{
   background: rgba(70, 116, 158, 0.60);
 }
 
+.event__box{
+  font-size: var(--normal-text-tablet);
+  padding: 40px;
+  margin-bottom: 0px;
+}
+.event-box p{
+  float: right;
+}
+.event3{
+  margin-bottom: 40px;
+}
+.event-box__content{
+  padding: 0px;
+  font-size: var(--normal-text-tablet);
+}
+.event-box-bottom__content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.event-box-bottom__content p{
+  display: contents;
+  font-size: var(--normal-text-desktop);
+  display: inline;
+}
+.event-box__title{
+  margin-top: -8px;
+  margin-bottom: 13px;
+  line-height: 45px;
+  font-size: var(--big-text-tablet);
+}
+.event-box__date{
+  margin-top: 15px;
+  float: right;
+}
+.event-page-img{
+  margin: 0 30px 40px 0;
+  float: left;
+  clear: both;
+  width: 383px;
+  height: 441px;
+}
+.event-box__content::after{
+  display: table;
+  content: "";
+  clear: both;
+}
+.cta-mobile{
+  display: inline;
+  margin: 0;
+  padding: 20px 0;
+  width: 387px;
+  font-size: var(--big-text-mobile);
+}
+
 /* ----- Footer ----- */
 footer{
   padding: 50px 40px;
@@ -799,7 +871,7 @@ footer hr{
 
 
 /* ----- Buttons ----- */
-.cta-desktop{
+.cta-header{
   font-size: var(--big-text-mobile);
   height: 55px;
   width: 205px;
@@ -896,7 +968,7 @@ h6{
 
 
 /* ----- Buttons ----- */
-.cta-desktop{
+.cta-header{
   font-size: var(--big-text-tablet);
   height: 65px;
   width: 235px;
@@ -923,22 +995,8 @@ h6{
 
 
 /* ----- Buttons----- */
-.cta-mobile{
-  display: block;
-  cursor: pointer;
-  margin: 20px 0 0 0;
-  padding: 20px 0;
-  width: 100%;
-  height: 86px;
-  border-radius: 2px;
-  text-align: center;
-  color: var(--white-for-eyes);
-  background-color: #1A1919;
-  box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  font-family: 'Open Sans-local-light','Inter';
-  font-size: var(--big-text-mobile);
-}
-.cta-desktop{
+
+.cta-header{
   cursor: pointer;
   padding: 10px 20px;
   text-align: center;
@@ -947,7 +1005,7 @@ h6{
   border-radius: 2px;
   box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
-.cta-buy{
+.cta-buy-tickets{
   width: 387px;
   height: 86px;
   margin: 40px;
