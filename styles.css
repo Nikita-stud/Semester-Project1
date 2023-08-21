@@ -144,7 +144,7 @@ header label i{
   background-size: cover;
   position: relative;
 }
-.home-page{
+.home-page-img{
   background-image: url(/images-sp1/rocket-small.jpg);
 }
 .news-page{
@@ -163,6 +163,9 @@ header label i{
   line-height: 40px;
   top: 10%;
   left: 20px;
+}
+.blue-header{
+  display: none;
 }
 .specifics__header{
   color: var(--white-for-eyes);
@@ -639,6 +642,7 @@ td:active{
 .home-page-img{
   background-image: url(/images-sp1/rocket-big.jpg);
   box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  min-height: 600px;
   height: 75vh;
   position: relative;
   background-position: 50% 27%;
@@ -659,24 +663,81 @@ td:active{
   display: none;
 }
 .title__container-desktop{
-  display: block;
+  display:inline-block;
   background-color: var(--blue);
   font-size: var(--normal-text-tablet);
   color: var(--white-for-eyes);
   border-radius: 2px;
-  width: 413px;
-  padding: 10px 0;
-  text-align: center;
+  padding: 10px 30px;
+  text-align: left;
   margin: 30px 0 30px 10px;
 }
+/* ----- Main Page Main----- */
+.exhibition-spaces{
+  margin: 0 40px;
+  background-color: #1B6087;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 20px;
+}
+.exhibition-small-img{
+  height: 245px;
+  background-position: center;
+}
+.img1{
+  background-image: url(/images-sp1/robots2-small.jpg);
+  width: auto;
+  order: 3;
+}
+.img2{
+  background-image: url(/images-sp1/technology-small.jpg);
+  grid-column: span 2;
+  order: 6;
+}
+.img3{
+  background-image: url(/images-sp1/inside1-small.jpg);
+  width: 60vh;
+  order: 5;
+}
+.img4{
+  background-image: url(/images-sp1/activity2-small.jpg);
+  width: auto;
+  order: 2;
+}
+.img5{
+  background-image: url(/images-sp1/museum-inside3-small.jpg);
+  width: 60vh;
+  order: 1;
+}
+.img6{
+  background-image: url(/images-sp1/bio-small.jpg);
+  width: 66vh;
+  order: 4;
+}
+.exhibition-img__text{
+  display: none;
+}
+
+
+
+
+
+
 
 /* ----- Events and News Page----- */
 .news-page{
   background-image: url(/images-sp1/museum-inside2-big.jpg);
   background-position: center;
+  position: relative;
+  min-height: 600px;
   height: 75vh;
 }
-
+.blue-header{
+  display: block;
+  width: 360px;
+  background: rgba(70, 116, 158, 0.60);
+}
 
 /* ----- Footer ----- */
 footer{
@@ -825,6 +886,11 @@ h6{
   width: 651px;
 }
 
+
+/* ----- Events and News Page----- */
+.blue-header{
+  width: 590px;
+}
 
 
 
