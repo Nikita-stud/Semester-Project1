@@ -155,6 +155,13 @@ header label i{
   background-image: url(/images-sp1/museum-aqua-small.jpg);
   background-position: center;
 }
+.h1-specifics__desktop{
+  display: none;
+}
+.h1-specifics__mobile, .h1-specifics__desktop{
+  font-family: 'Futura PT','Futura-local', 'Inter', 'Open Sans', 'Helvetica Neue', sans-serif;     
+  font-weight: 100;  
+}
 .welcome-img__text{
   font-size: var(--h1-mobile);
   color: var(--black-for-eyes);
@@ -168,8 +175,9 @@ header label i{
   display: none;
 }
 .specifics__header{
-  color: var(--white-for-eyes);
-  width: 220px;
+  color: var(--white-for-eyes); 
+  width: 380px;
+  line-height: 45px;
 }
 .title__container{
   width: 100%;
@@ -606,7 +614,7 @@ td:active{
 }
 
 
-
+/* ----- Buttons----- */
 .cta-mobile{
   display: block;
   cursor: pointer;
@@ -639,6 +647,11 @@ td:active{
 
 @media (min-width: 744px){
   /* ----- Header ----- */
+.cta-header{
+  font-size: var(--big-text-mobile);
+  height: 55px;
+  width: 205px;
+}
 .upper-header-mobile{
   display: none;
   flex-direction: row;
@@ -735,13 +748,6 @@ td:active{
 .exhibition-img__text{
   display: none;
 }
-
-
-
-
-
-
-
 /* ----- Events and News Page----- */
 .news-page{
   background-image: url(/images-sp1/museum-inside2-big.jpg);
@@ -755,11 +761,11 @@ td:active{
   width: 360px;
   background: rgba(70, 116, 158, 0.60);
 }
-
 .event__box{
   font-size: var(--normal-text-tablet);
   padding: 40px;
   margin-bottom: 0px;
+  line-height: 30px;
 }
 .event-box p{
   float: right;
@@ -788,8 +794,10 @@ td:active{
   font-size: var(--big-text-tablet);
 }
 .event-box__date{
-  margin-top: 15px;
+  margin: 15px 0;
   float: right;
+  text-decoration: underline;
+  font-size: var(--big-text-mobile);
 }
 .event-page-img{
   margin: 0 30px 40px 0;
@@ -805,12 +813,12 @@ td:active{
 }
 .cta-mobile{
   display: inline;
+  justify-content: center;
   margin: 0;
-  padding: 20px 0;
+  padding: 25px 0;
   width: 387px;
   font-size: var(--big-text-mobile);
 }
-
 /* ----- Footer ----- */
 footer{
   padding: 50px 40px;
@@ -869,12 +877,22 @@ footer hr{
 
 
 
-
-/* ----- Buttons ----- */
-.cta-header{
-  font-size: var(--big-text-mobile);
-  height: 55px;
-  width: 205px;
+/* ----- Specification Page----- */
+.specifics-page{
+  background-image: url(/images-sp1/museum-aqua-big.jpg);
+  min-height: 600px;
+  height: 75vh;
+}
+.specifics__header{
+  display: block;
+  width: 420px;
+  background: rgba(27, 96, 135, 0.60);
+}
+.h1-specifics__desktop{
+  display: contents;
+}
+.h1-specifics__mobile{
+  display: none;
 }
 
 
@@ -953,16 +971,65 @@ h6{
 }
 .info-page__img{
   display: inline-block;
-  margin: 10px 100px 40px 100px;
+  margin: 10px 10px 40px 100px;
   height: 724px;
   width: 651px;
 }
-
-
+.info-side__container{
+  display: flex;
+}
+.infor-side-right{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 /* ----- Events and News Page----- */
 .blue-header{
   width: 590px;
 }
+.event__box{
+  font-size: var(--normal-text-desktop);
+  padding: 40px 100px;
+  line-height: 40px;
+}
+.event-box__content{
+  font-size: var(--normal-text-desktop);
+}
+.event-box-bottom__content p{
+  font-size: var(--big-text-tablet);
+}
+.event-box__title{
+  margin-top: -3px;
+  margin-bottom: 30px;
+  line-height: 65px;
+  font-size: var(--big-text-desktop);
+}
+.event-box__date{
+  margin: 40px 0;
+  font-size: var(--big-text-tablet);
+}
+.event-page-img{
+  margin: 0 40px 20px 0;
+  width: 483px;
+  height: 541px;
+}
+.cta-mobile{
+  font-size: var(--big-text-tablet);
+  padding: 20px 0;
+}
+/* ----- Specification Page----- */
+.specifics__header{
+  width: 630px;
+}
+
+
+
+
+
+
+
+
+
 
 
 
