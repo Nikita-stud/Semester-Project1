@@ -46,7 +46,102 @@
     </header>
 
     <main>
-      <a href="tickets.html" class="cta-mobile">Finish order <i class="fa-solid fa-arrow-right"></i></a>
+      <section class="info__content">
+        <h1 class="h1-informative">Tickets</h1>
+        <p>Select the amount of people on the date you chose. For groups of over 7 select the group ticket</p>
+      </section>
+
+      <section>
+        <div class="amount__box">
+          <h2>Adults above 25</h2>
+          <hr class="amount-lines">
+          <p class="amount-price">120kr</p>
+          <form action="" method="post">
+            <label for="amount"></label>
+              <select name="amount-grown-ups" id="amount">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+              </select>
+          </form>
+        </div>
+        <div class="amount__box">
+          <h2>Everyone under 25</h2>
+          <hr class="amount-lines">
+          <p class="amount-price">80kr</p>
+          <form action="" method="post">
+            <label for="amount"></label>
+              <select name="amount-children" id="amount">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+              </select>
+          </form>
+        </div>
+        <div class="amount__box">
+          <h2>Groups Tickets</h2>
+          <hr class="amount-lines">
+          <p class="amount-price">650kr</p>
+          <form action="" method="post">
+            <label for="amount"></label>
+              <select name="amount-groups" id="amount">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+              </select>
+          </form>
+        </div>
+        <div class="amount__box">
+          <h2 class="amount-unavailable">Special Event</h2>
+          <hr class="amount-lines">
+          <p class="amount-price amount-unavailable">20kr</p>
+          <form action="" method="post">
+            <label for="amount"></label>
+              <select name="amount-event" id="amount">
+                <option value="0">-</option>
+              </select>
+          </form>
+        </div>
+      </section>
+
+      <section class="giftcard__container">
+        <form action="" method="post">
+          <label for="giftcard" class="giftcard__header">Giftcard</label>
+          <input type="text" name="giftcard" id="giftcard" placeholder="Enter here..." required>
+          <input type="submit" value="Redeem" class="cta-reedeme">
+        </form>
+      </section>
+
+      <section class="receipt__container">
+        <h3 class="receipt__title">Your Tickets</h3>
+        <hr class="amount-lines">
+        <p>Adults above 25</p>
+        <p>1 Ticket selected</p>
+        <p>10:00-17:00</p>
+        <hr class="amount-lines">
+        <p class="receipt-total">Total 130kr</p>
+        <hr class="amount-lines">
+        <hr class="amount-lines">
+        <a href="error.html" class="cta-mobile">Finish order <i class="fa-solid fa-arrow-right"></i></a>
+      </section>
     </main>
 
 

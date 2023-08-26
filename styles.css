@@ -441,6 +441,9 @@ footer hr{
 }
 
 /* ----- Specification Page Box containing info itself----- */
+.specifics-desktop__container{
+  display: none;
+}
 .read-more__container{
   width: 100%;
   padding: 20px;
@@ -478,9 +481,6 @@ footer hr{
 }
 #specifics-checkbox1:checked ~ .opened__content{
   color: var(--white-for-eyes);
-}
-.closed__content{
-  display: inline;
 }
 /* ----- Specification Page Box Nightmare because of no Javascript ----- */
 #specifics-checkbox2:checked ~ .read-more-open{
@@ -528,7 +528,7 @@ footer hr{
 #specifics-checkbox6:checked ~ .opened__content{
   color: var(--white-for-eyes);
 }
-/* ----- Specification Page Box color and img above----- */
+/* ----- Specification Page Box color and img above plus the button----- */
 .card1, .card4{
   background-color: var(--red);
 }
@@ -564,7 +564,19 @@ footer hr{
   background-image: url(/images-sp1/robots-small.jpg);
   background-position: 40% 25%;
 }
-
+.cta-read{
+  float: right;
+  display: inline;
+  margin-top: 15px;
+  cursor: pointer;
+  width: 150px;
+  height: 37px;
+  border-radius: 2px;
+  display: grid;
+  place-items: center;
+  background-color: var(--black-for-eyes);
+  color: var(--white-for-eyes);
+}
 /* ----- Tickets-Calendar Page----- */
 .calendar__container{
   font-family: 'Open Sans-local','Inter','Helvetica Neue', sans-serif;
@@ -613,13 +625,139 @@ td:active{
   display: contents;
 }
 
+/* -----Tickets-Amount Page----- */
+.amount__box{
+  padding: 10px 20px;
+  background-color: #FFF;
+  border-bottom: 1px solid var(--black-for-eyes) ;
+  width: 100%;
+  height: 126px;
+}
+.amount-lines{
+  border: 1px solid;
+}
+.amount-price{
+  display: inline;
+  float: left;
+  margin-top: 35px;
+  text-decoration: underline 2px solid;
+  text-underline-offset: 5px;
+  font-size: var(--normal-text-tablet);
+}
+.amount-unavailable{
+  text-decoration: line-through;
+}
+#amount{
+  margin: 15px 0px 20px 10px;
+  float: right;
+  padding: 10px 80px 10px 40px;
+  font-size: var(--normal-text-mobile);
+  border: 1.5px solid var(--black-for-eyes);
+}
+
+.giftcard__container{
+  padding: 40px 20px;
+}
+.giftcard__header{
+  margin-bottom: 10px;
+  font-family: 'Open Sans-local', 'Open Sans-local-light','Inter','Helvetica Neue', sans-serif;
+  font-size: var(--big-text-mobile);
+  display: block;
+}
+#giftcard{
+  max-width: 90%;
+  padding: 20px 0px 20px 20px;
+  border: 1.5px solid var(--black-for-eyes);
+  font-size: var(--normal-text-mobile);
+}
+.cta-reedeme{
+  box-sizing: border-box;
+  display: inline-block;
+  float: right;
+  padding: 14px 20px;
+  font-size: var(--big-text-mobile);
+  color: var(--white-for-eyes);
+  background-color: #000;
+
+}
+
+.receipt__container{
+  padding: 20px;
+  background-color: #FFF;
+  margin-bottom: 40px;
+  line-height: 80px;
+}
+.receipt__title{
+  font-family: 'Futura-local', 'Inter', 'Open Sans', 'Helvetica Neue', sans-serif;     
+  font-weight: 700;
+  font-size: var(--big-text-tablet);                
+}
+.receipt__container p{
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  font-size: var(--normal-text-mobile);
+}
+.receipt-total{
+}
+
+
+
+
+
+
+
+
+
+
+
+/* -----Error Page----- */
+.main-small{
+  min-height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-rows: 1fr;
+  line-height: 40px;
+}
+.main-small p{
+  font-size: var(--normal-text-mobile);
+  color: #686868;
+}
+.error__container{
+  padding: 20px;
+}
+.error-img{
+  background-image: url(/images-sp1/error.png);
+  height: 230px;
+  margin: 20px 0;
+}
+.error__title{
+  color: #000;
+  font-family: 'Inter', 'Inter-local', 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: bold;
+}
+.cta-reload{
+  display: inline-flex;
+  justify-content: center;
+  margin: 20px 0;
+  padding: 10px 45px;
+  border-radius: 10px;
+  background: #316EB5;
+  color: var(--white-for-eyes);
+  font-family: 'Inter', 'Inter-local';
+  font-size: var(--normal-text-tablet);
+}
+.cta-reload:hover{
+  background: #2d66a7;
+}
+
 
 /* ----- Buttons----- */
 .cta-mobile{
   display: block;
   cursor: pointer;
   margin: 20px 0 0 0;
-  padding: 20px 0;
+  padding: 20px 0px;
   width: 100%;
   height: 86px;
   border-radius: 2px;
@@ -894,6 +1032,99 @@ footer hr{
 .h1-specifics__mobile{
   display: none;
 }
+.spc-img1,.spc-img2,.spc-img3,.spc-img4,.spc-img5,.spc-img6{
+  display: none;
+}
+.card2, .card4, .card6{
+  color: var(--white-for-eyes);
+  flex-direction: row-reverse;
+}
+.card-blank{
+  color: var(--black-for-eyes);
+}
+.specifics-desktop__container{
+  display: block;
+  display: flex;
+  align-items: flex-start;
+  padding: 40px;
+  width: 100%;
+  height: 400px;
+  font-size: var(--normal-text-tablet);
+  box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25), 4px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+}
+.read-more__title{
+  margin-top: -8px;
+}
+.specifics-futura{
+  font-family: 'Futura PT','Futura-local', 'Inter', 'Open Sans', 'Helvetica Neue', sans-serif;     
+  font-weight: 100;
+  font-size: var(--normal-text-tablet);
+}
+.specifics-short__content{
+  max-width: 450px;
+}
+.specifics-wide__content{
+  max-width: 600px;
+}
+.read-more__container{
+  display: none;
+}
+.cta-read{
+  display: none;
+}
+
+/* ----- Specification Page Pictures Tablet and Desktop----- */
+.specifics-desktop__img{
+  background-size: cover;
+  border-radius: 2px;
+  border: 1.5px solid var(--black-for-eyes);
+  width: 100%;
+  min-width: 340px;
+  height: 320px;
+  background-position: center;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.img-painting, .img-vr, .img-history{
+  margin-right: 30px;
+}
+.img-bio, .img-art, .img-robotics{
+  margin-left: 30px;
+}
+.img-painting{
+  background-image: url(/images-sp1/museum-inside3-small.jpg);
+  background-position: 70% 60%;
+}
+.img-bio{
+  background-image: url(/images-sp1/bio-small.jpg);
+  background-position: 99% 30%;
+}
+.img-vr{
+  background-image: url(/images-sp1/technology-small.jpg);
+  background-position: 80% 0%;
+}
+.img-art{
+  background-image: url(/images-sp1/activity2-small.jpg);
+}
+.img-history{
+  background-image: url(/images-sp1/inside1-small.jpg);
+  background-position: 80% 60%;
+}
+.img-robotics{
+  background-image: url(/images-sp1/robots2-small.jpg);
+  background-position: 50% 30%;
+}
+/* ----- Specification Page Pseudo----- */
+.img-painting:hover{
+  background-image: url(/images-sp1/lab.jpg);
+  z-index: 1;
+  transition: .2s;
+
+}
+
+
+
+
+
 
 
 
@@ -1027,6 +1258,28 @@ h6{
 
 
 
+/* -----Error Page----- */
+.main-small{
+  line-height: 70px;
+}
+.main-small p{
+  font-size: var(--normal-text-desktop);
+}
+.error-img{
+  background-image: url(/images-sp1/error.png);
+  height: 213px;
+  margin: 40px 0;
+}
+.error__title{
+  font-size: var(--h1-desktop);
+  margin-bottom: 10px;
+}
+.cta-reload{
+  float: right;
+  margin: 20px 0 40px;
+  padding: 0px 50px;
+  font-size: var(--normal-text-desktop);
+}
 
 
 
@@ -1089,17 +1342,4 @@ h6{
   box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
   font-family: 'Open Sans-local-light','Inter';
   font-size: var(--big-text-mobile);
-}
-.cta-read{
-  float: right;
-  display: inline;
-  margin-top: 15px;
-  cursor: pointer;
-  width: 150px;
-  height: 37px;
-  border-radius: 2px;
-  display: grid;
-  place-items: center;
-  background-color: var(--black-for-eyes);
-  color: var(--white-for-eyes);
 }
