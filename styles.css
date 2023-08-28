@@ -665,50 +665,61 @@ td:active{
   display: block;
 }
 #giftcard{
-  max-width: 90%;
+  position: relative;
+  z-index: 999;
+  width: 100%;
   padding: 20px 0px 20px 20px;
   border: 1.5px solid var(--black-for-eyes);
   font-size: var(--normal-text-mobile);
 }
 .cta-reedeme{
   box-sizing: border-box;
-  display: inline-block;
-  float: right;
+  display: inline;
+  z-index: 1000;
+  position: absolute;
+  right: 20px;
   padding: 14px 20px;
   font-size: var(--big-text-mobile);
   color: var(--white-for-eyes);
   background-color: #000;
-
+  cursor: pointer;
 }
-
+/* -----Tickets-Amount Page Receipt----- */
 .receipt__container{
   padding: 20px;
+  border-bottom: 1px solid;
   background-color: #FFF;
   margin-bottom: 40px;
-  line-height: 80px;
+  line-height: 100px;
 }
 .receipt__title{
-  font-family: 'Futura-local', 'Inter', 'Open Sans', 'Helvetica Neue', sans-serif;     
-  font-weight: 700;
+  margin: -20px 0;
+  font-family: 'Futura PT','Futura-local', 'Inter', 'Open Sans', 'Helvetica Neue', sans-serif;     
+  font-weight: 100;
   font-size: var(--big-text-tablet);                
 }
-.receipt__container p{
+.receipt__text{
   text-decoration: underline;
-  text-underline-offset: 5px;
+  text-underline-offset: 8px;
   font-size: var(--normal-text-mobile);
 }
 .receipt-total{
+  font-family: 'Open Sans', 'Open Sans-local','Inter','Helvetica Neue', sans-serif;
+  margin-top: -20px;  
+  word-spacing: 50px;
+  font-size: var(--big-text-mobile);
 }
-
-
-
-
-
-
-
-
-
-
+.total-above-line{
+  border: 2px solid;
+  margin-top: 20px;
+}
+.total-below-line{
+  border: 0.5px solid;
+  margin: -15px 0 5px 0;
+}
+.finish-cta__container{
+  display: none;
+}
 
 /* -----Error Page----- */
 .main-small{
@@ -754,7 +765,9 @@ td:active{
 
 /* ----- Buttons----- */
 .cta-mobile{
-  display: block;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
   margin: 20px 0 0 0;
   padding: 20px 0px;
@@ -768,7 +781,9 @@ td:active{
   font-family: 'Open Sans-local-light','Inter';
   font-size: var(--big-text-mobile);
 }
-
+.fa-solid{
+  margin-left: 8px;
+}
 
 
 
@@ -950,10 +965,7 @@ td:active{
   clear: both;
 }
 .cta-mobile{
-  display: inline;
-  justify-content: center;
   margin: 0;
-  padding: 25px 0;
   width: 387px;
   font-size: var(--big-text-mobile);
 }
@@ -1120,6 +1132,80 @@ footer hr{
   transition: .2s;
 
 }
+/* -----Tickets-Amount Page----- */
+.amount__box{
+  display: flex;
+  justify-content: space-between;
+  place-items: center;
+  padding: 0px 0 0 20px;
+  margin: 20px 40px;
+  border-bottom: none ;
+  width: 660px;
+  height: 81px;
+}
+.amount-lines{
+  display: none;
+}
+.amount-price{
+  position: absolute;
+  left: 400px;
+  margin-top: 0;
+  font-size: var(--normal-text-desktop);
+}
+#amount{
+  margin: 30px 0px 30px 10px;
+  height: 81px;
+  width: 180px;
+  font-size: var(--normal-text-desktop);
+  color: var(--white-for-eyes);
+  background-color: #000;
+}
+.giftcard__container{
+  margin: 0 20px;
+}
+#giftcard{
+  width: 321px;
+  font-size: var(--normal-text-tablet);
+}
+.cta-reedeme{
+  display: inline;
+  position: relative;
+  width: 200px;
+  left: -100px;
+  bottom: -2.5px;
+  padding: 16px 20px;
+}
+/* -----Tickets-Amount Page Receipt----- */
+.receipt__container{
+  margin: 100px 40px 40px 40px;
+  padding: 0 20px;
+  position: relative;
+}
+.receipt__container a{
+  display: none;
+}
+.receipt__title{
+  font-size: var(--big-text-desktop);  
+  position: absolute;     
+  top: -80px;  
+  left: 0;       
+}
+.receipt__text{
+  text-decoration: none;
+  font-size: var(--normal-text-tablet);
+}
+.receipt-total{
+  word-spacing: 150px;
+  font-size: var(--big-text-tablet);
+}
+.total-below-line{
+  display: none;
+}
+.finish-cta__container{
+  padding: 0px 40px 80px 40px;
+  display: flex;
+  justify-content: flex-end;
+}
 
 
 
@@ -1246,18 +1332,51 @@ h6{
 }
 .cta-mobile{
   font-size: var(--big-text-tablet);
-  padding: 20px 0;
 }
 /* ----- Specification Page----- */
 .specifics__header{
   width: 630px;
 }
-
-
-
-
-
-
+/* -----Tickets-Amount Page----- */
+.amount__container{
+  display: inline-block;
+  margin-bottom: 250px;
+}
+.amount__box{
+  margin: 20px 20px 26px 100px;
+  width: 630px;
+  font-size: var(--normal-text-mobile);
+}
+.amount-price{
+  left: 460px;
+}
+#amount{
+  width: 160px;
+}
+.giftcard__container{
+  margin: 0 80px;
+  position: absolute;
+  top: 825px;
+}
+.receipt__container{
+  width: 388px;
+  top: 0px;
+  right: 0;
+  float: right;
+  margin: 20px 100px 40px 20px;
+}
+.receipt__title{
+  top:-60px;
+}
+.receipt-total{
+  word-spacing: 130px;
+}
+.finish-cta__container{
+  margin-right: 60px;
+  top: 900px;
+  position: absolute;
+  right: 0;
+}
 /* -----Error Page----- */
 .main-small{
   line-height: 70px;
