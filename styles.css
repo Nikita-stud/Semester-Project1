@@ -32,7 +32,7 @@ h1{
   font-family: 'Futura PT','Futura-local', 'Inter', 'Open Sans', 'Helvetica Neue', sans-serif;     
   font-weight: 100;                                  
 }
-h2{
+h2, .h4-home{
   font-family: 'Open Sans-local', 'Open Sans-local-light','Inter','Helvetica Neue', sans-serif;
 }
 h3,h4{
@@ -78,7 +78,7 @@ i{
 
 
 
-/* ----- Main Page Header----- */
+/* ----- Header----- */
 .upper-header-mobile{
   z-index: 1;
   width: 100%;
@@ -223,7 +223,7 @@ header label i{
   background-image: url(/images-sp1/bio-small.jpg);
   background-position-y: 40%;
 }
-.exhibition-img__text{
+.exhibition-img__text, .exhibition-img-hover__text{
   font-family: 'Open Sans-local','Inter','Helvetica Neue', sans-serif;
   font-size: var(--normal-text-mobile);
   border-radius: 2px;
@@ -233,6 +233,9 @@ header label i{
   position: absolute;
   top: 60%;
   left: 15px;
+}
+.exhibition-img-hover__text{
+  opacity: 0;
 }
 /* ----- Main Page Tickets----- */
 .get-tickets__container{
@@ -264,6 +267,9 @@ header label i{
 }
 .get-tickets-time{
   font-size: var(--big-text-mobile);
+}
+.info-home, .h4-home{
+  display: none;
 }
 /* ----- Main Page Events----- */
 .event-small-img{
@@ -858,49 +864,159 @@ td:active{
 /* ----- Main Page Main----- */
 .exhibition-spaces{
   margin: 0 40px;
-  background-color: #1B6087;
   display: grid;
-  grid-template-columns: auto auto;
-  grid-template-rows: 1fr 1fr 1fr;
-  gap: 20px;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 40px;
 }
 .exhibition-small-img{
   height: 245px;
   background-position: center;
+  border: 1.5px solid var(--black-for-eyes);
 }
 .img1{
-  background-image: url(/images-sp1/robots2-small.jpg);
-  width: auto;
+  background-position: 0% 35%;
+}
+.img1-desktop{
   order: 3;
+  grid-area: 2/1/3/4;
+}
+.img1:hover{
+  margin-top: -25px;
+  width: calc( 100% + 25px );
+  height: calc( 100% + 50px );
 }
 .img2{
-  background-image: url(/images-sp1/technology-small.jpg);
-  grid-column: span 2;
+  background-position: 99% 1%;
+}
+.img2-desktop{
   order: 6;
+  grid-area: 3/5/4/8;
+}
+.img2:hover{
+  margin-left: -25px;
+  margin-top: -25px;
+  width: calc( 100% + 25px );
+  height: calc( 100% + 25px );
 }
 .img3{
-  background-image: url(/images-sp1/inside1-small.jpg);
-  width: 60vh;
-  order: 5;
+  background-position: 10% 70%;
 }
-.img4{
-  background-image: url(/images-sp1/activity2-small.jpg);
-  width: auto;
+.img3-desktop{
+  order: 5;
+  grid-area: 3/1/4/5;
+}
+.img3:hover{
+  margin-top: -25px;
+}
+.img4-desktop{
   order: 2;
+  grid-area: 1/6/2/8;
+}
+.img4:hover{
+  margin-left: -25px;
 }
 .img5{
-  background-image: url(/images-sp1/museum-inside3-small.jpg);
-  width: 60vh;
-  order: 1;
+  background-position: 50% 30%;
 }
-.img6{
-  background-image: url(/images-sp1/bio-small.jpg);
-  width: 66vh;
+.img5-desktop{
+  order: 1;
+  grid-area: 1/1/2/6;
+}
+.img5:hover, .img4:hover, .img3:hover{
+  width: calc( 100% + 25px );
+  height: calc( 100% + 25px );
+}
+.img6-desktop{
   order: 4;
+  grid-area: 2/4/3/8;
+}
+.img6:hover{
+  margin-left: -25px;
+  margin-top: -25px;
+  width: calc( 100% + 25px );
+  height: calc( 100% + 50px );
+}
+.exhibition-small-img:hover .exhibition-img-hover__text{
+  opacity: 1;
+  background-color:rgba(135, 40, 46, 0.60);
+  font-size: var(--normal-text-desktop);
+  padding: 10px 5px;
+  top: 68%;
+  left: 10px;
 }
 .exhibition-img__text{
   display: none;
 }
+
+/* ----- Main Page Tickets----- */
+.get-tickets__container{
+  margin: 40px 0;
+  height: 220px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+}
+.get-tickets__title{
+  font-size: var(--big-text-mobile);
+  padding: 0px 20px 0 0;
+}
+.get-tickets-hours__container{
+  display: none;
+}
+.info-home{
+  display: block;
+}
+/* ----- Main Page Events----- */
+.event-small__container{
+  display: grid;
+  grid-template-columns: auto 1fr 1fr 1fr;
+  gap: 20px;
+  margin: 0 40px;
+}
+.h4-home{
+  display: block;
+  font-size: var(--big-text-tablet);
+}
+.vertical{
+  writing-mode: vertical-lr;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+}
+.event-small-img{
+  height: 306px;
+  border: none;
+}
+.event-small-img__text{
+  display: none;
+}
+.event-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 200px;
+  text-align: center;
+  font-size: var(--normal-text-tablet);
+  color: var(--white-for-eyes);
+  padding: 15px 10px;
+  border: none;
+  line-height: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 /* ----- Events and News Page----- */
 .news-page{
   background-image: url(/images-sp1/museum-inside2-big.jpg);
@@ -1251,6 +1367,40 @@ i{
   padding: 20px 90px;
   line-height: 75px;
   top: 60%;
+}
+.title__container-desktop{
+  font-size: var(--normal-text-desktop);
+  padding: 10px 90px;
+}
+/* ----- Main Page Main----- */
+.exhibition-spaces{
+  margin: 0 100px;
+}
+/* ----- Main Page Tickets----- */
+.get-tickets__container{
+  padding: 0 100px;
+}
+.get-tickets__title{
+  font-size: var(--big-text-tablet);
+}
+/* ----- Main Page Events----- */
+.event-small__container{
+  margin: 0 100px;
+  gap: 30px;
+}
+.h4-home{
+  font-size: var(--big-text-desktop);
+}
+.event-small-img{
+  height: 386px;
+}
+.event-info{
+  height: 200px;
+  text-align: center;
+  font-size: var(--normal-text-desktop);
+  color: var(--white-for-eyes);
+  padding: 20px;
+  line-height: 40px;
 }
 /* ----- Footer ----- */
 footer{
