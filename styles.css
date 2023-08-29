@@ -1244,9 +1244,29 @@ footer hr{
 /* ----- Specification Page Pseudo----- */
 .img-painting:hover{
   background-image: url(/images-sp1/lab.jpg);
-  z-index: 1;
+  transition: .3s;
+  background-position: 20% 30%;
+}
+.img-bio:hover{
+  background-image: url(/images-sp1/bio2.jpg);
+  transition: .3s;
+}
+.img-vr:hover{
+  background-image: url(/images-sp1/vr-small.jpg);
   transition: .2s;
-
+  background-position: 99% 0%;
+}
+.img-art:hover{
+  background-image: url(/images-sp1/activity-small.jpg);
+  transition: .2s;
+}
+.img-history:hover{
+  background-image: url(/images-sp1/museum-inside-small.jpg);
+  transition: .2s;
+}
+.img-robotics:hover{
+  background-image: url(/images-sp1/robots-small.jpg);
+  transition: .2s;
 }
 /* -----Tickets-Amount Page----- */
 .amount__box{
@@ -1486,6 +1506,26 @@ h6{
 /* ----- Specification Page----- */
 .specifics__header{
   width: 630px;
+}
+.specifics-desktop__container{
+  padding: 40px 100px;
+  font-size: var(--normal-text-desktop);
+}
+.read-more__title{
+  font-size: var(--big-text-tablet);
+  margin-top: -12px;
+}
+.specifics-futura{
+  font-size: var(--normal-text-desktop);
+}
+.img-bio:hover{
+  background-position: 50% 35%;
+}
+.img-history:hover{
+  background-position: 50% 55%;
+}
+.img-robotics:hover{
+  background-position: 50% 25%;
 }
 /* -----Tickets-Amount Page----- */
 .amount__container{
