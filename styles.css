@@ -63,13 +63,13 @@ i{
   --margin-desktop: 0 100px;
   --margin-tablet: 0 40px;
   --margin-mobile: 0 20px;
-  --h1-desktop: 3.75rem;
-  --h1-tablet: 3rem;
-  --h1-mobile: 2.4375rem;
-  --big-text-desktop: 3rem;
-  --big-text-tablet: 2.43rem;
-  --big-text-mobile: 1.75rem;
-  --normal-text-desktop: 1.75rem;
+  --h1-desktop: 4rem;
+  --h1-tablet: 3.3rem;
+  --h1-mobile: 2.7rem;
+  --big-text-desktop: 2.7rem;
+  --big-text-tablet: 2.13rem;
+  --big-text-mobile: 1.71rem;
+  --normal-text-desktop: 1.71rem;
   --normal-text-tablet: 1.375rem;
   --normal-text-mobile: 1.188rem;
   --box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -584,26 +584,29 @@ footer hr{
   color: var(--white-for-eyes);
 }
 /* ----- Tickets-Calendar Page----- */
+.month__container{
+  margin: 0 20px;
+}
+#month{
+  font-size: var(--normal-text-mobile);
+  width: 100%;
+  text-align: center;
+  padding: 15px;
+  border: 2px solid var(--black-for-eyes);
+  border-radius: 2px;
+}
+.calendar-form{
+  margin: 20px 20px;
+}
 .calendar__container{
   font-family: 'Open Sans-local','Inter','Helvetica Neue', sans-serif;
   font-size: var(--normal-text-mobile);
   place-items: center;
-  padding: 0 40px;
 }
 table, th, td{
   width: 100%;
   height: 65px;
-  table-layout: fixed;
-  text-align: center;
-  border-collapse: collapse;
-  border: 4px solid #ABABAB;
-}
-th{
-  height: 50px;
-}
-td{
-  cursor: pointer;
-  background-color: white;
+  border-bottom: 1px solid;
 }
 td:hover{
   background-color: #ABABAB;
@@ -612,10 +615,6 @@ td:hover{
 td:active{
   background: #191919;
   color: white;
-}
-.week-days{
-  background-color: var(--red);
-  color: var(--white-for-eyes);
 }
 .closed-date{
   background-color: #D6CDCD;
@@ -629,6 +628,9 @@ td:active{
 }
 .event-date:hover ~ {
   display: contents;
+}
+.buy-cta__container{
+  margin: 20px 0 40px 0;
 }
 
 /* -----Tickets-Amount Page----- */
@@ -787,9 +789,14 @@ td:active{
   font-family: 'Open Sans-local-light','Inter';
   font-size: var(--big-text-mobile);
 }
-.fa-solid{
-  margin-left: 8px;
-}
+
+
+
+
+
+
+
+
 
 
 
@@ -804,8 +811,36 @@ td:active{
 
 /* ----- Media Queries Tablet----- */
 
+@media (max-width: 743px) {
+  /* ----- Tickets-Calendar Page----- */
+  .calendar-example__container{
+    display: none;
+  }
+  th{
+    display: none;
+  }
+  td{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: white;
+  }
+  #inactive-date-mobile{
+    display: none;
+  }
+  .tablet-text-desktop{
+    display: none;
+  }
+
+}
+
+
 @media (min-width: 744px){
   /* ----- Header ----- */
+.fa-solid{
+  margin-left: 8px;
+}
 .cta-header{
   font-size: var(--big-text-mobile);
   height: 55px;
@@ -1006,17 +1041,6 @@ td:active{
   line-height: 30px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
 /* ----- Events and News Page----- */
 .news-page{
   background-image: url(/images-sp1/museum-inside2-big.jpg);
@@ -1027,7 +1051,7 @@ td:active{
 }
 .blue-header{
   display: block;
-  width: 360px;
+  width: 380px;
   background: rgba(70, 116, 158, 0.60);
 }
 .event__box{
@@ -1140,8 +1164,6 @@ footer hr{
   max-width: 100%;
   height: 511px;
 }
-
-
 
 /* ----- Specification Page----- */
 .specifics-page{
@@ -1268,6 +1290,65 @@ footer hr{
   background-image: url(/images-sp1/robots-small.jpg);
   transition: .2s;
 }
+
+/* ----- Tickets-Calendar Page----- */
+.month__container{
+  margin: 0 40px 30px 40px;
+}
+.calendar-example__container{
+  display: flex;
+  gap: 5px;
+  float: right;
+}
+.calendar-example{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--normal-text-mobile);
+  width: 125px;
+  height: 50px;
+}
+.selected-date{
+  background-color: #000;
+  color: var(--white-for-eyes);
+}
+#month{
+  width: 250px;
+  padding: 10px;
+}
+.calendar-form{
+  margin: 20px 40px;
+}
+.calendar__container{
+  padding: 0 40px;
+}
+table, th, td{
+  overflow: scroll;
+  table-layout: fixed;
+  text-align: center;
+  border-collapse: collapse;
+  border: 4px solid #ABABAB;
+}
+th{
+  height: 50px;
+}
+td{
+  cursor: pointer;
+  background-color: white;
+}
+.tabel-text-mobile{
+  display: none;
+}
+.week-days{
+  background-color: var(--red);
+  color: var(--white-for-eyes);
+}
+.buy-cta__container{
+  display: flex;
+  justify-content: flex-end;
+  margin: 40px;
+}
+
 /* -----Tickets-Amount Page----- */
 .amount__box{
   display: flex;
@@ -1343,12 +1424,17 @@ footer hr{
   justify-content: flex-end;
 }
 
-
-
-
-
-
-
+/* -----Error Page----- */
+.error__title{
+  font-size: var(--h1-tablet);
+  margin-bottom: 10px;
+}
+.main-small{
+  line-height: 50px;
+}
+.main-small p{
+  font-size: var(--normal-text-tablet);
+}
 
 
 }
@@ -1369,7 +1455,7 @@ footer hr{
 
 @media (min-width: 1280px){
 i{
-  font-size: 2.4rem;
+  font-size: 2rem;
 }
 /* ----- Header ----- */
 .upper-header-desktop{
@@ -1472,7 +1558,7 @@ h6{
 }
 /* ----- Events and News Page----- */
 .blue-header{
-  width: 590px;
+  width: 620px;
 }
 .event__box{
   font-size: var(--normal-text-desktop);
@@ -1527,7 +1613,35 @@ h6{
 .img-robotics:hover{
   background-position: 50% 25%;
 }
+
+/* ----- Tickets-Calendar Page----- */
+#month{
+  width: 350px;
+  font-size: var(--normal-text-tablet);
+}
+table, th, td{
+  height: 70px;
+}
+th{
+  height: 60px;
+  font-size:var(--normal-text-tablet);
+}
+.calendar-form{
+  margin: 20px 100px;
+}
+.buy-cta__container{
+  margin: 40px 100px;
+}
+
 /* -----Tickets-Amount Page----- */
+
+.month__container{
+  margin: 0 100px 30px 100px;
+}
+.calendar-example{
+  font-size: var(--normal-text-tablet);
+  width: 200px;
+}
 .amount__container{
   display: inline-block;
   margin-bottom: 250px;
@@ -1639,8 +1753,6 @@ h6{
   height: 86px;
   margin: 40px;
   cursor: pointer;
-  float: right;
-  clear: both;
   display: flex;
   justify-content: center;
   align-items: center;
