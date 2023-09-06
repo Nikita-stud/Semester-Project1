@@ -674,7 +674,6 @@ footer hr{
 
 .card3, .card6{
   background-color: var(--green);
-  color: #fff;
 }
 
 .card6{
@@ -1438,9 +1437,14 @@ footer hr{
   display: none;
 }
 
-.card2, .card4, .card6{
+.card2, .card4{
   color: var(--white-for-eyes);
   flex-direction: row-reverse;
+}
+
+.card6{
+  flex-direction: row-reverse;
+  color: #FFF;
 }
 
 .card-blank{
