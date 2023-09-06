@@ -68,7 +68,7 @@ i{
 :root{
   --red: #87282E;
   --blue: #1B6087;
-  --green: #7f7e2f; 
+  --green: #797828; 
   --white-for-eyes: rgb(244, 243, 243);
   --black-for-eyes: #001C2A;
   --margin-desktop: 0 100px;
@@ -370,7 +370,7 @@ header label i{
 .event-info{
   text-align: center;
   font-size: var(--normal-text-tablet);
-  color: rgb(239, 230, 230);
+  color: rgb(249, 246, 246);
   padding: 20px;
   border: 2px solid var(--black-for-eyes);
   box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
