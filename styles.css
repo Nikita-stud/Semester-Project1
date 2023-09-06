@@ -352,7 +352,8 @@ header label i{
 .event-small-img__text{
   font-family: 'Inter-local','Inter','Helvetica Neue', sans-serif;
   font-size: var(--big-text-mobile);
-  color: #fff;
+  background-color: #00000000;
+  color: var(--white-for-eyes);
   position: absolute;
   width: 90px;
   top: 30px;
