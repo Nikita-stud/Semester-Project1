@@ -107,8 +107,9 @@ i{
 header nav{
   position: absolute;
   background-color: var(--red);
-  font-size: var(--normal-text-mobile);
+  font-size: var(--big-text-mobile);
   display: none;
+  line-height: 50px;
   border-radius: 0 2px 0 0;
   border-bottom: 1.5px solid var(--white-for-eyes, #F4F3F3);
   box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
@@ -116,8 +117,16 @@ header nav{
 
 header nav li a{
   color: var(--white-for-eyes);
+  display: flex;
+  margin-left: 20px;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
   font-family: 'Open Sans', 'Open Sans-local','Inter','Helvetica Neue', sans-serif;
   padding: 0 5px;
+}
+header nav li {
+  border-top: solid var(--white-for-eyes);
 }
 
 header label i{
@@ -125,17 +134,9 @@ header label i{
   font-size: var(--h1-mobile);
 }
 
-.nav-stripes{
-  border: 1px solid var(--white-for-eyes);
-  margin: 10px 0;
-  display: block;
-  margin-left: -20px;
-  margin-right: -20px;
-}
-
 .nav-close-icon i{
   font-size: 2.7rem;
-  margin-bottom: 12px;
+  margin: 18px 0 19px 25px;
 }
 
 .nav-close-icon i:active ~ nav{
@@ -150,7 +151,7 @@ header label i{
   background-color: var(--red);
   display: block;
   margin-top: -85px;
-  padding: 20px 20px 15px 20px;
+  width: 210px;
 }
 
 .logo-small{
