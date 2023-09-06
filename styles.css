@@ -401,14 +401,14 @@ footer{
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
 }
 
-footer nav, footer nav a, h6{
+footer nav, footer nav a, h6, .footer-header{
   color: var(--white-for-eyes);
   font-family: 'Open Sans-local-light','Inter','Helvetica Neue', sans-serif;
   font-size: var(--normal-text-mobile);
   line-height: 45px;
 }
 
-h6{
+h6, .footer-header{
   margin-top: 20px;
   font-size: var(--big-text-mobile);
 }
@@ -1358,7 +1358,7 @@ footer nav, footer nav a, h6{
   font-size: var(--normal-text-tablet);
 }
 
-h6{
+h6, .footer-header{
   font-size: var(--big-text-tablet);
   margin-bottom: 15px;
   text-decoration: underline;
@@ -1841,13 +1841,13 @@ footer{
   padding: 50px 100px;
 }
 
-footer nav, footer nav a, h6{
+footer nav, footer nav a, h6, .footer-header{
   font-family: 'Inter', 'Inter-local', 'Open Sans', 'Helvetica Neue', sans-serif;
   line-height: 46px;
   font-size: var(--normal-text-desktop);
 }
 
-h6{
+h6, .footer-header{
   font-size: var(--big-text-desktop);
   margin-bottom: 20px;
 }
