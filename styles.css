@@ -674,6 +674,7 @@ footer hr{
 
 .card3, .card6{
   background-color: var(--green);
+  color: #fff;
 }
 
 .card6{
