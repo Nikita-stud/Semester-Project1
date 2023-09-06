@@ -205,8 +205,9 @@ header label i{
 }
 
 .specifics__header{
+  background-color: #1b5f871e;
   color: var(--white-for-eyes); 
-  width: 380px;
+  width: 230px;
   line-height: 45px;
 }
 
