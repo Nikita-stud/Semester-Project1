@@ -370,7 +370,7 @@ header label i{
 .event-info{
   text-align: center;
   font-size: var(--normal-text-tablet);
-  color: rgb(255, 255, 255);
+  color: var(--white-for-eyes);
   padding: 20px;
   border: 2px solid var(--black-for-eyes);
   box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -383,6 +383,7 @@ header label i{
 
 .info2{
   background-color: var(--green);
+  color: rgb(255, 255, 255)
 }
 
 .info3{
@@ -521,6 +522,7 @@ footer hr{
 
 .event3{
   background-color: var(--green);
+  color: rgb(255, 255, 255);
 }
 
 .event-page-img{
