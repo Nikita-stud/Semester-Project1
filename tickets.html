@@ -47,21 +47,22 @@
         <p>Calendar below shows date for upcoming exhibitions, click the date you want to visit the museum</p>
       </section>
 
-
       <section class="month__container">
-        <label for="month" class="month"><span class="span__empty">Delete</span></label>
-        <select name="month" id="month">
-          <option value="March">March</option>
-          <option value="April">April</option>
-          <option value="May">May</option>
-          <option value="June">June</option>
-          <option value="July">July</option>
-          <option value="August">August</option>
-          <option value="September">September</option>
-          <option value="October">October</option>
-          <option value="November">November</option>
-          <option value="December">December</option>
-        </select>
+        <form action="submit.php" method="post">
+          <label for="month" class="month"><span class="span__empty">Delete</span></label>
+          <select name="month" id="month">
+            <option value="March">March</option>
+            <option value="April">April</option>
+            <option value="May">May</option>
+            <option value="June">June</option>
+            <option value="July">July</option>
+            <option value="August">August</option>
+            <option value="September">September</option>
+            <option value="October">October</option>
+            <option value="November">November</option>
+            <option value="December">December</option>
+          </select>
+        </form>
         <div class="calendar-example__container">
           <p class="calendar-example closed-date">Closed</p>
           <p class="calendar-example event-date">Event</p>
@@ -69,7 +70,7 @@
         </div>
       </section>
 
-      <form action="" method="post" class="calendar-form">
+      <form action="submit.php" method="post" class="calendar-form">
         <table class="calendar__container">
           <thead>
             <tr>
@@ -86,7 +87,7 @@
             <tr>
               <td class="inactive-date" id="inactive-date-mobile">
                 <label for="2023-02-28">28</label>
-                <input type="hidden" value="2023-02-28" id="2023-02-28"/>
+                <input type="hidden" value="2023-02-28" id="2023-02-28">
               </td>
               <td class="closed-date">
                 <label for="2023-03-01"><span class="tablet-text-desktop">1</span><span class="tabel-text-mobile">Closed</span></label>
