@@ -752,7 +752,7 @@ td:hover{
   border: 4.5px solid #000;
 }
 
-td:active{
+table tr td input:after{
   background: #191919;
   color: white;
 }
@@ -1692,7 +1692,7 @@ td{
   position: relative;
   width: 200px;
   left: -100px;
-  bottom: -2.5px;
+  bottom: -2px;
   padding: 16px 20px;
 }
 
