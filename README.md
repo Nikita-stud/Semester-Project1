@@ -2,7 +2,7 @@
 
 Community Science Museum has been my Semester Project 1 task at the Norwegian University Noroff. The website only uses HTML and CSS, not yet having had to deal with js or other code languages nor bootstraps. The Design was the main aspect of this project, having to go above and beyond as of the point of making this projects.
 
-![Image of the upper part of the website](/images-sp1/science-museum.jpg)
+![Image of the upper part of the website](./imgReadMe/science-museum.jpg)
 
 Explore the website by visiting the link - [The Community Science Museum](https://wonderful-begonia-be3d10.netlify.app/)
 
